@@ -1,0 +1,100 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36mcom.att.research.xacml:xacml-test[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding xacml-test 1.0.2-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/dariofad/git/git_unibg/att_xacml/XACML/XACML-TEST/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:compile[m [1m(default-compile)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1850 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:testCompile[m [1m(default-testCompile)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.18.1:test[m [1m(default-test)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/dariofad/git/git_unibg/att_xacml/XACML/XACML-TEST/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.att.research.xacmlatt.pdp.std.dom.DOMResponseConformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.589 sec - in com.att.research.xacmlatt.pdp.std.dom.DOMResponseConformanceTest
+Running com.att.research.xacmlatt.pdp.std.dom.DOMResponseTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec - in com.att.research.xacmlatt.pdp.std.dom.DOMResponseTest
+Running com.att.research.xacmlatt.pdp.std.json.ResponseTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.25 sec - in com.att.research.xacmlatt.pdp.std.json.ResponseTest
+Running com.att.research.xacmlatt.pdp.std.json.RequestMainTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.283 sec - in com.att.research.xacmlatt.pdp.std.json.RequestMainTest
+Running com.att.research.xacmlatt.pdp.std.json.RequestDefaultCategoryTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.228 sec - in com.att.research.xacmlatt.pdp.std.json.RequestDefaultCategoryTest
+Running com.att.research.xacmlatt.pdp.std.json.RequestCategoryTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.458 sec - in com.att.research.xacmlatt.pdp.std.json.RequestCategoryTest
+Running com.att.research.xacmlatt.pdp.std.json.RequestConformanceTest
+XML file did not load: 'IIA005Request.xml  e=com.att.research.xacml.std.dom.DOMStructureException: Exception loading Request: Missing attribute "AttributeId" in "urn:oasis:names:tc:xacml:3.0:core:schema:wd-17:Attribute"
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.744 sec - in com.att.research.xacmlatt.pdp.std.json.RequestConformanceTest
+Running com.att.research.xacmlatt.pdp.std.json.ResponseConformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.963 sec - in com.att.research.xacmlatt.pdp.std.json.ResponseConformanceTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionAccessPermittedTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionAccessPermittedTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBagSizeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBagSizeTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionNumberTypeConversionTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionNumberTypeConversionTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionEqualityTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.092 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionEqualityTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionURIStringConcatenateTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionURIStringConcatenateTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBagIsInTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBagIsInTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionSpecialMatchTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionSpecialMatchTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionXPathTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionXPathTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionRegexpMatchTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionRegexpMatchTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionStringNormalizeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionStringNormalizeTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBagTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.07 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBagTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBagOneAndOnlyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBagOneAndOnlyTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionHigherOrderBagTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionHigherOrderBagTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionComparisonTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionComparisonTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBaseTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionBaseTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionHomogeneousSimpleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionHomogeneousSimpleTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionStringConversionTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionStringConversionTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionStringFunctionsTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionStringFunctionsTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionSetTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionSetTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionStringEqualIgnoreCaseTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionStringEqualIgnoreCaseTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionArithmeticTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionArithmeticTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionDateTimeArithmeticTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionDateTimeArithmeticTest
+Running com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionLogicalTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec - in com.att.research.xacmlatt.pdp.std.functions.FunctionDefinitionLogicalTest
+
+Results :
+
+Tests run: 183, Failures: 0, Errors: 0, Skipped: 1
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  11.409 s
+[[1;34mINFO[m] Finished at: 2019-06-14T17:56:25+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

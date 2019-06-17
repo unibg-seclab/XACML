@@ -619,4 +619,24 @@ public class Conformance {
 		System.exit(0);
 	}
 
+	public void main2(String[] args) {
+		Conformance conformance	= new Conformance();
+		try {
+			if (conformance.init(args)) {
+				conformance.run();
+			}
+
+		} catch (Exception ex) {
+			ex.printStackTrace(System.err);
+			System.exit(1);
+		} finally {
+			try {
+				conformance.close();
+			} catch (IOException ex) {
+				ex.printStackTrace(System.err);
+			}
+		}
+		//System.exit(0);
+	}
+
 }
