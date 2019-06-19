@@ -15,8 +15,9 @@ public class Proxy_test_1 {
 
         //init args as asked by test
         String args []  = new String[2];
+        //current working directory
         args[0] ="-dir";
-        args[1] ="./src/test/resources/testsets/pip/configurable-csv";
+        args[1] ="src/test/resources/testsets/annotation";
 
         //get current dir to detect broken paths
         System.out.println("\n[+][+][+][+][+]The current working directory is " + System.getProperty("user.dir") + "[+][+][+][+][+]\n");

@@ -297,6 +297,9 @@ public class TestBase extends SimpleFileVisitor<Path> {
 		if (Files.notExists(pathDir)) {
 			throw new IllegalArgumentException(pathDir.toString() + " does not exist.");
 		}
+		//inserted by dario
+		System.out.println("\n[-][-][-]Path to default properties:"+pathDir.toAbsolutePath()+"[-][-][-]\n");
+
 		//
 		// Set it as the System variable so the XACML factories know where the properties are
 		// loaded from.

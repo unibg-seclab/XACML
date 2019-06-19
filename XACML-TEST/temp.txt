@@ -1,0 +1,46 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36mcom.att.research.xacml:xacml-test[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding xacml-test 1.0.2-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/dariofad/git/git_unibg/att_xacml/XACML/XACML-TEST/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:compile[m [1m(default-compile)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1851 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:testCompile[m [1m(default-testCompile)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.18.1:test[m [1m(default-test)[m @ [36mxacml-test[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/dariofad/git/git_unibg/att_xacml/XACML/XACML-TEST/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.att.research.xacmlatt.pdp.std.temp_console_test.Proxy_test_2
+
+[+][+][+][+][+]The current working directory is /home/dariofad/git/git_unibg/att_xacml/XACML/XACML-TEST[+][+][+][+][+]
+
+You need to specify the policy file to be used.
+
+[+][+][+][+][+]test executed[+][+][+][+][+]
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec - in com.att.research.xacmlatt.pdp.std.temp_console_test.Proxy_test_2
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.350 s
+[[1;34mINFO[m] Finished at: 2019-06-19T10:08:57+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
