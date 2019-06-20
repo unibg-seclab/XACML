@@ -61,3 +61,39 @@ By default it will be running at localhost:8888/admin
 
 If you point your browser to this URL you should see the Admin Console web page come up.
 
+---
+
+# How to use
+
+## Install
+
+Import the `XACML` folder as `maven project` in Eclipse.
+
+Run maven `clean install` using the pom.xml of XACML.
+
+Run maven `test`.
+
+## Run test
+
+Execute `TestRequest.java` file in `XACML-PDP/src/main/java/eu/mosaicrown/test`.
+
+The test directory (`dir`) must be passed as arguments (mandatory for any test).
+Two more arguments must be passed in order to execute our test: the policy (`policy`) and the request (`request`).
+
+Example:
+```
+-dir ~/git/XACML/XACML-PDP/src/main/resources
+-policy ~/git/XACML/XACML-PDP/src/main/resources/mypolicy.xml
+-request ~/git/XACML/XACML-PDP/src/main/resources/request1.xml
+```
+
+The test directory passed as argument must have this structure:
+```
+my_test_dir
+ |- logging.properties
+ |- xacml.properties
+ |- results (folder, not mandatory for our test)
+ |  `- here are the results produced by the evaluation
+ `- requests (folder, not mandatory for our test)
+    `- here are the xacml requests
+```
