@@ -83,8 +83,8 @@ Two more arguments must be passed in order to execute our test: the policy (`pol
 Example:
 ```
 -dir ~/git/XACML/XACML-PDP/src/main/resources
--policy ~/git/XACML/XACML-PDP/src/main/resources/mypolicy.xml
--request ~/git/XACML/XACML-PDP/src/main/resources/request1.xml
+-policy ~/git/XACML/XACML-PDP/src/main/resources/policies/policy1.xml
+-request ~/git/XACML/XACML-PDP/src/main/resources/requests/request1.xml
 ```
 
 The test directory passed as argument must have this structure:
@@ -94,6 +94,8 @@ my_test_dir
  |- xacml.properties
  |- results (folder, not mandatory for our test)
  |  `- here are the results produced by the evaluation
- `- requests (folder, not mandatory for our test)
-    `- here are the xacml requests
+ |- requests (folder)
+ |  `- here are the xacml requests
+ `- policies (folder)
+    `- here are our policies
 ```
