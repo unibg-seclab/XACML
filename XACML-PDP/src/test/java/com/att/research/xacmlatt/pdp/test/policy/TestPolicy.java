@@ -162,8 +162,8 @@ public class TestPolicy extends TestBase {
 		//
 		// Setup where the PDP can find the policy
 		//
-		System.setProperty(XACMLProperties.PROP_ROOTPOLICIES, "policy");
-		System.setProperty("policy.file", this.policy.toString());
+		XACMLProperties.setProperty(XACMLProperties.PROP_ROOTPOLICIES, "policy");
+		XACMLProperties.setProperty("policy.file", this.policy.toString());
 		//
 		// Determine if they want us to skip generation. This helps when a huge number of
 		// requests will get generated for a policy and can take some time to do so. The user
