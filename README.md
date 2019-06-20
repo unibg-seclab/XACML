@@ -121,10 +121,10 @@ in the `requests` folder, and each policy in the `policies` folder.
 3. userA wants to read (with purpose _scam_) resource object1
 
 #### Policies implemented
-1. _userA_ can _read_ resource _object1_
-2. userA can read resource object1 with purpose good (in the Target).  
-   userA can not read resource object1 with purpose scam (in the Target).
-3. userA can read resource object1 if her purpose is not equal to _scam_ (in the Condition)
+1. _userA_ can (Permit) _read_ resource _object1_
+2. userA can (Permit) read resource object1 with purpose good (in the Target).  
+   userA cannot (Deny) read resource object1 with purpose scam (in the Target).
+3. userA can (Permit) read resource object1 if her purpose is not equal to _scam_ (in the Condition)
 
 #### Test cases
 
