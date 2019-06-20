@@ -1,6 +1,6 @@
 <Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
 		PolicyId="policyTest"
-		RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides"
+		RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable"
 		Version="3.0">
 
 	<Target/>
@@ -18,7 +18,7 @@
 					</Match>
 					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
 						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">good</AttributeValue>
-						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-purpose"
+						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:3.0:action:action-purpose"
 											 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
 											 DataType="http://www.w3.org/2001/XMLSchema#string"
 											 MustBePresent="false"/>

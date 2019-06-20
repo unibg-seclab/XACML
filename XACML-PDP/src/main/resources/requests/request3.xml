@@ -7,7 +7,7 @@
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
         </Attribute>
         <Attribute AttributeId="urn:oasis:names:tc:xacml:3.0:action:action-purpose" IncludeInResult="false">
-        	<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">good</AttributeValue>
+        	<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">scam</AttributeValue>
         </Attribute>
     </Attributes>
     <Attributes Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject">

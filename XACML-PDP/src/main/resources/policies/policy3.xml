@@ -5,7 +5,7 @@
 
 	<Target/>
 		<Rule Effect="Permit" RuleId="Permit-Rule-1">
-		<Description>Simple permit rule (userA can read object1)</Description>
+		<Description>Simple permit rule (userA can read object1) for non-scam purposes</Description>
 		<Target>
 			<AnyOf>
 				<AllOf>
@@ -28,12 +28,27 @@
 						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id"
 											 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
 											 DataType="http://www.w3.org/2001/XMLSchema#string"
-											 MustBePresent="false"/></Match>
+											 MustBePresent="false"/>
+					</Match>
 				</AllOf>
 			</AnyOf>
 		</Target>
-	</Rule>
 
+		<Condition>
+        	<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+            	<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+            		<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                		<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:3.0:action:action-purpose"
+                							 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                           					 DataType="http://www.w3.org/2001/XMLSchema#string"
+                           					 MustBePresent="true"></AttributeDesignator>
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">scam</AttributeValue>
+                </Apply>
+            </Apply>
+        </Condition>
+	</Rule>
+	
 	<Rule Effect="Deny" RuleId="Default-Deny-Rule"/>
 
 </Policy>
