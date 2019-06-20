@@ -99,3 +99,8 @@ my_test_dir
  `- policies (folder)
     `- here are our policies
 ```
+
+For logger settings, pass the logging.properties file as VM argument.
+```
+-Djava.util.logging.config.file=/home/marco/git/XACML/XACML-PDP/src/main/resources/logging.properties
+```
