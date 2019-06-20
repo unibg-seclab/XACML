@@ -128,11 +128,11 @@ in the `requests` folder, and each policy in the `policies` folder.
 
 #### Test cases
 
-|                |: policy1.xml :|: policy2.xml :|: policy3.xml :|
-|:--------------:|:-------------:|:-------------:|:-------------:|
-|: request1.xml :| Permit        | Deny          | Indeterminate (missing purpose in the request) |
-|: request2.xml :| Permit        | Permit        | Permit        |
-|: request3.xml :| Permit        | Deny          | Deny          |
+|                  | policy1.xml | policy2.xml | policy3.xml |
+| :--------------  | :---------: | :---------: | :---------: |
+| **request1.xml** | Permit      | Deny        | Indeterminate (missing purpose in the request) |
+| **request2.xml** | Permit      | Permit      | Permit      |
+| **request3.xml** | Permit      | Deny        | Deny        |
 
 
 
