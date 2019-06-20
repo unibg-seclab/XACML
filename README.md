@@ -75,6 +75,8 @@ Run maven `test`.
 
 ## Run test
 
+### Test a single request
+
 Execute `TestRequest.java` file in `XACML-PDP/src/main/java/eu/mosaicrown/test`.
 
 The test directory (`dir`) must be passed as arguments (mandatory for any test).
@@ -105,3 +107,34 @@ For logger settings, pass the logging.properties file as VM argument (when using
 ```
 -Djava.util.logging.config.file=/home/marco/git/XACML/XACML-PDP/src/main/resources/logging.properties
 ```
+
+### Automatic test for all policies and request
+
+Execute `AutoTestRequest.java` file in `XACML-PDP/src/main/java/eu/mosaicrown/test`.
+
+This test automatically executes single TestRequest instances using each request
+in the `requests` folder, and each policy in the `policies` folder.
+
+#### Policies implemented
+1. _userA_ can _read_ _object1_
+2. userA can read object1 with purpose good (in the Target).
+   userA can not read object1 with purpose scam (in the Target).
+3. userA can read object1 if her purpose is not scam (in the Condition)
+
+#### Requests implemented
+1. userA wants to read object1
+2. userA wants to read object1 with purpose _good_
+3. userA wants to read object1 with purpose _scam_
+
+#### Test cases
+
+|              |:policy1.xml:|:policy2.xml:|:policy3.xml:|
+|:------------:|:-----------:|:-----------:|:-----------:|
+|:request1.xml:| Permit      | Deny        | Indeterminate (missing purpose in the request) |
+|:request2.xml:| Permit      | Permit      | Permit      |
+|:request3.xml:| Permit      | Deny        | Deny        |
+
+
+
+
+
