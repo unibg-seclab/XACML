@@ -16,7 +16,6 @@ import org.slf4j.LoggerFactory;
 import com.att.research.xacml.api.Request;
 import com.att.research.xacml.api.Response;
 import com.att.research.xacml.api.pep.PEPException;
-import com.att.research.xacml.std.dom.DOMRequest;
 import com.att.research.xacml.std.dom.DOMStructureException;
 import com.att.research.xacml.std.json.JSONStructureException;
 import com.att.research.xacml.util.FactoryException;
