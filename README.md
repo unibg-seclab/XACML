@@ -115,16 +115,16 @@ Execute `AutoTestRequest.java` file in `XACML-PDP/src/main/java/eu/mosaicrown/te
 This test automatically executes single TestRequest instances using each request
 in the `requests` folder, and each policy in the `policies` folder.
 
-#### Policies implemented
-1. _userA_ can _read_ _object1_
-2. userA can read object1 with purpose good (in the Target).
-   userA can not read object1 with purpose scam (in the Target).
-3. userA can read object1 if her purpose is not scam (in the Condition)
-
 #### Requests implemented
-1. userA wants to read object1
-2. userA wants to read object1 with purpose _good_
-3. userA wants to read object1 with purpose _scam_
+1. _userA_ wants to _read_ resource _object1_
+2. userA wants to read (with purpose _good_) resource object1
+3. userA wants to read (with purpose _scam_) resource object1
+
+#### Policies implemented
+1. _userA_ can _read_ resource _object1_
+2. userA can read resource object1 with purpose good (in the Target).  
+   userA can not read resource object1 with purpose scam (in the Target).
+3. userA can read resource object1 if her purpose is not equal to _scam_ (in the Condition)
 
 #### Test cases
 
