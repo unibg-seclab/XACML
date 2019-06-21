@@ -1,0 +1,112 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+		PolicyId="policyTest"
+		RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable"
+		Version="3.0">
+
+	<Target/>
+	<Rule Effect="Permit" RuleId="Permit-Rule-Good">
+		<Description>Simple permit rule (userA can read object1) for good purposes</Description>
+		<Target>
+			<AnyOf>
+				<AllOf>
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+											 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+											 DataType="http://www.w3.org/2001/XMLSchema#string"
+											 MustBePresent="false"/>
+					</Match>
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">userA</AttributeValue>
+						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id"
+											 Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+											 DataType="http://www.w3.org/2001/XMLSchema#string"
+											 MustBePresent="false"/>
+					</Match>
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">object1</AttributeValue>
+						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id"
+											 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+											 DataType="http://www.w3.org/2001/XMLSchema#string"
+											 MustBePresent="false"/>
+					</Match>
+				</AllOf>
+			</AnyOf>
+		</Target>
+
+		<Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+            	<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+               		<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:3.0:action:action-purpose"
+               							 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                       					 DataType="http://www.w3.org/2001/XMLSchema#string"
+                      					 MustBePresent="true"></AttributeDesignator>
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">good</AttributeValue>
+            </Apply>
+        </Condition>
+	</Rule>
+	
+	
+	<Rule Effect="Permit" RuleId="Permit-Rule-Scam-Obligation">
+		<Description>Permit rule (userA can read object1) for scam purposes with obligation</Description>
+		<Target>
+			<AnyOf>
+				<AllOf>
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+											 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+											 DataType="http://www.w3.org/2001/XMLSchema#string"
+											 MustBePresent="false"/>
+					</Match>
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">userA</AttributeValue>
+						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id"
+											 Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+											 DataType="http://www.w3.org/2001/XMLSchema#string"
+											 MustBePresent="false"/>
+					</Match>
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">object1</AttributeValue>
+						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id"
+											 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+											 DataType="http://www.w3.org/2001/XMLSchema#string"
+											 MustBePresent="false"/>
+					</Match>
+				</AllOf>
+			</AnyOf>
+		</Target>
+
+		<Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+            	<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+               		<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:3.0:action:action-purpose"
+               							 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                       					 DataType="http://www.w3.org/2001/XMLSchema#string"
+                       					 MustBePresent="true"></AttributeDesignator>
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">scam</AttributeValue>
+            </Apply>
+        </Condition>
+        
+        <ObligationExpressions>
+        	<ObligationExpression ObligationId="SanitizationObligation" FulfillOn="Permit">
+        	
+        		<AttributeAssignmentExpression AttributeId="urn:oasis:names:tc:xacml:3.0:example:sanitized-content"
+        									   Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
+   					<Function Type="sanitizationFunction">
+   						<AttributeSelector Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+   										   Path="md:record/md:patient/md:patientDisease"
+   										   DataType="http://www.w3.org/2001/XMLSchema#string"
+   										   MustBePresent="false"/>   					
+   					</Function>  
+				</AttributeAssignmentExpression>
+
+    		</ObligationExpression>
+    	</ObligationExpressions> 
+	</Rule>
+	
+	<Rule Effect="Deny" RuleId="Default-Deny-Rule"/>
+
+</Policy>
