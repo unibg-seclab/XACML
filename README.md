@@ -125,14 +125,16 @@ in the `requests` folder, and each policy in the `policies` folder.
 2. userA can (Permit) read resource object1 with purpose good (in the Target).  
    userA cannot (Deny) read resource object1 with purpose scam (in the Target).
 3. userA can (Permit) read resource object1 if her purpose is not equal to _scam_ (in the Condition)
+4. userA can (Permit) read resource object1 if her purpose is equal to _good_ (in the Condition).  
+   userA can (Permit) read resource object1 if her purpose is equal to _scam_ (in the Condition), but she has to execute an _Obligation_ (a sanitization function).
 
 #### Test cases
 
-|                  | policy1.xml | policy2.xml | policy3.xml |
-| :--------------  | :---------: | :---------: | :---------: |
-| **request1.xml** | Permit      | Deny        | Indeterminate (missing purpose in the request) |
-| **request2.xml** | Permit      | Permit      | Permit      |
-| **request3.xml** | Permit      | Deny        | Deny        |
+|                  | policy1.xml | policy2.xml | policy3.xml | policy4.xml |
+| :--------------  | :---------: | :---------: | :---------: | :---------: |
+| **request1.xml** | Permit      | Deny        | Indeterminate (missing purpose in the request) | Indeterminate |
+| **request2.xml** | Permit      | Permit      | Permit      | Permit      |
+| **request3.xml** | Permit      | Deny        | Deny        | Permit (with sanitiazion Obligation) |
 
 
 
